@@ -1,25 +1,26 @@
 # Blinky-Buzz Toy 
 
-**Dependencies**: timerLib/
-**Source Code**: src/ 
+* **Dependencies**: timerLib/
+	* Dependencies were offered in the demo folder, since originaly posted. 
+	* ADD LINK HERE 
+* **Source Code**: src/ 
+	* Code Files 
 
 ### Start Machine 
 
 ```bash
-
-**$**> make all 
-
+make all 
 ```
 
 ### Clean Machine 
 
 ```bash 
-**$**> make clean 
+make clean 
 ```
 
 ### Instructions 
 
-* Button 1: Makes Red and Green Light 
-* Button 2: Turns off the light that is currently on, because of button 1.
-* Button 3: Turns on speaker and makes a buzz 
-* Button 4: Is used to dim the light when the 1st button is clicked
+* SW 1: Makes Red and Green Light 
+* SW 2: Turns off the light that is currently on, because of button 1.
+* SW 3: Turns on speaker and makes a buzz 
+* SW 4: Is used to dim the light when the 1st button is clicked
