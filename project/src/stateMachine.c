@@ -7,7 +7,10 @@
 static char pwmCount = 0;
 void sm_update_led()
 {
+  // PWM mod 3 === 0  ^ PWM mod 3 === 2	
+ 
   pwmCount = (pwmCount+1)%3; //range from 0-2
+
   static char new_red, new_green;
   
   switch(ledMode){
@@ -30,8 +33,8 @@ void sm_update_led()
     }
     break; // break from main statement
   case 4:
-    new_red = (pwmCount <1); //red dims
-    new_green = (pwmCount <1); //green dims
+    new_red = (pwmCount < 1); //red dims
+    new_green = (pwmCount < 1); //green dims
     break;
   }
   if(red_on != new_red || green_on != new_green){

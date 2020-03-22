@@ -1,10 +1,10 @@
 #ifndef switches_included
 #define switches_included
 
-#define SW1 BIT0 /* First Button */
-#define SW2 BIT1 /* Second Button */
-#define SW3 BIT2 /* Third Button */
-#define SW4 BIT3 /* Fourth Button */
+#define SW1 BIT0 /* SW1: First Button */
+#define SW2 BIT1 /* SW2: Second Button */
+#define SW3 BIT2 /* SW3: Third Button */
+#define SW4 BIT3 /* SW4: Fourth Button */
 
 #define SWITCHES (SW1|SW2|SW3|SW4)
 
@@ -16,6 +16,6 @@ extern char switch_state_down1,
             switch_state_down3,
             switch_state_down4,
             switch_state_changed,
-            ledMode;/* effectively boolean */
+            ledMode;/*boolean */
 
 #endif // included
