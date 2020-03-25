@@ -2,10 +2,7 @@
 
 * **Dependencies**: timerLib/
 	* Dependencies were offered in the demo folder, since originaly posted. 
-	* ADD LINK HERE 
-* **Source Code**: src/ 
-	* Code Files 
-
+	
 ### Start Machine 
 
 ```bash
