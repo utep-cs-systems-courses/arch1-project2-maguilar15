@@ -13,7 +13,8 @@ void sm_update_led()
 
   static char new_red, new_green;
   
-  switch(ledMode){
+  switch(ledMode)
+  {
   case 1:
     new_red= 1;
     new_green = 1;
@@ -37,7 +38,8 @@ void sm_update_led()
     new_green = (pwmCount < 1); //green dims
     break;
   }
-  if(red_on != new_red || green_on != new_green){
+  if(red_on != new_red || green_on != new_green)
+  {
     red_on = new_red;
     green_on = new_green;
     led_changed = 1;

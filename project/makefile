@@ -1,4 +1,4 @@
-all:
+load:
 	(cd timerLib; make install)
 	(cd src; make load)
 

@@ -6,7 +6,7 @@
 ### Start Machine 
 
 ```bash
-make all 
+make load 
 ```
 
 ### Clean Machine 
