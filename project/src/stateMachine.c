@@ -1,8 +1,12 @@
 #include <msp430.h>
 #include "buzzer.h"
-#include "stateMachine.h"
+//#include "stateMachine.h"
 #include "switches.h"
 #include "led.h"
+
+// Assembly 
+#include "assembly.h"
+
 
 static char pwmCount = 0;
 void sm_update_led()
@@ -24,14 +28,7 @@ void sm_update_led()
     new_green=0;
     break;
   case 3:
-    switch(buzzerChange){
-    case 0:
-      buzzer_set_period(3500);
-      break;
-    case 1:
-      buzzer_set_period(0);
-      break;
-    }
+    do_something(); 
     break; // break from main statement
   case 4:
     new_red = (pwmCount < 1); //red dims
