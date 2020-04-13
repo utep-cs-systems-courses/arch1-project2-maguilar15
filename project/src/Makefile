@@ -1,5 +1,5 @@
 # makfile configuration
-COMMON_OBJECTS  = 
+SRC = led.o switches.o buttonMain.o wdInterruptHandler.o stateMachine.o buzzer.o 
 CPU             = msp430g2553
 CFLAGS          = -mmcu=${CPU} -I../h
 LDFLAGS		= -L/opt/ti/msp430_gcc/include
@@ -11,8 +11,10 @@ AS              = msp430-elf-as
 all: button.elf 
 
 #additional rules for files
-button.elf: ${COMMON_OBJECTS} assembly.o led.o switches.o buttonMain.o stateMachine.o wdInterruptHandler.o buzzer.o ../lib/libTimer.a
+button.elf: ${SRC} assembly.o ../lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
+
+assembly.o: stateMachine.s stateMachine.h assembly.h
 
 load: button.elf
 	msp430loader.sh button.elf
